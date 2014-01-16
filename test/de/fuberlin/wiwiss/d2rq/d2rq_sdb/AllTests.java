@@ -22,7 +22,7 @@ public class AllTests {
 				"Test for de.fuberlin.wiwiss.d2rq.dr2q_sdb");
 		//$JUnit-BEGIN$
 // TODO SDB tests are currently broken
-//		suite.addTestSuite(SdbSqlEqualityTest.class);
+		suite.addTestSuite(SdbSqlEqualityTest.class);
 		//$JUnit-END$
 		return suite;
 	}

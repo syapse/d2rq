@@ -49,7 +49,8 @@ public abstract class LoadDataTest extends TestCase
 	protected Model sdbDataModel;
 	// hsql-config
 	private static final String HSQL_DRIVER_NAME = "org.hsqldb.jdbcDriver";
-	private static final String HSQL_URL = "jdbc:hsqldb:mem:hsqldata;create=true";
+	private static final String HSQL_URL = "jdbc:hsqldb:mem:hsqldata;ifexists=true";
+//	private static final String HSQL_URL = "jdbc:hsqldb:mem:hsqldata;create=true";
 	private static final String HSQL_USER = "sa";
 	private static final String HSQL_PASS = "";
 	
@@ -136,6 +137,7 @@ public abstract class LoadDataTest extends TestCase
 	    		{ 
 	            	System.out.println("Loading Data from " + entry.getName());
 	        	    sqlData = convertStreamToString(zipInputStream);
+	        	    hsqlConnection.setAutoCommit(true);
 	    			statement = hsqlConnection.createStatement();
 	    			statement.execute(sqlData);
 	    			statement.close();
