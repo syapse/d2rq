@@ -243,9 +243,10 @@
 			<lib dir="${lib}">
 				<exclude name="*/*"/><!-- Do not recurse into subdirectories -->
 			</lib>
-			<lib dir="${lib}/arq-2.9"/>
-			<lib dir="${lib}/hsqldb-2.2.8"/>
-			<lib dir="${lib}/jetty-8.1.1">
+			<lib dir="jena-arq-2.9.0-incubating"/>
+<!--			<lib dir="${lib}/arq-2.9"/> -->
+			<lib dir="${lib}/hsqldb-2.2.9"/>
+			<lib dir="${lib}/jetty-8.1.8">
 				<exclude name="servlet-api-*.jar"/>
 			</lib>
 			<lib dir="${lib}/joseki-3.4.4"/>
